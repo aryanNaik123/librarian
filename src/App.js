@@ -65,7 +65,7 @@ export default function App() {
   return (
     <div>
       <h1 className="text-3xl font-bold text-center mt-6">
-        Librarian <IoLibrary className="inline-block mb-1" />
+        Librarian <IoLibrary className="inline-block mb-2" />
       </h1>
       <div className="ml-5">
         <button
