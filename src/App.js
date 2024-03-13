@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { IoLibrary } from "react-icons/io5";
+import { IoLibrary, IoTrashBin } from "react-icons/io5";
 import { Typeahead } from "react-typeahead";
 import axios from 'axios';
 
@@ -58,6 +58,10 @@ export default function App() {
     }
   };
 
+  const handleDeleteBook = (index) => {
+    setReadingList(prevList => prevList.filter((_, i) => i !== index));
+  };
+
   return (
     <div>
       <h1 className="text-3xl font-bold text-center mt-6">
@@ -99,6 +103,9 @@ export default function App() {
                   onError={(e) => e.target.src = 'https://via.placeholder.com/150?text=No+Cover'}
                 />
                 <span>{book.title} by {book.author}</span>
+                <button onClick={() => handleDeleteBook(index)} className="ml-auto">
+                  <IoTrashBin className="text-red-500 hover:text-red-700" />
+                </button>
               </li>
             ))}
           </ul>
