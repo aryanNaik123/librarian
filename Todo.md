@@ -1,0 +1,5 @@
+- [ ] Tags
+  - [ ] filter by tag (Sci-Fi, Self-Help, Fantasy)
+- [ ] LLM Summary
+- [ ] Reading Lists (Reading, Read, Want to Read)
+- [ ] Notes Section
